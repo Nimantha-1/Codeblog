@@ -1,0 +1,67 @@
+{% extends "home/index.html" %}
+{% block title %}
+    About Us
+{% endblock %}
+{% block aboutactive %} 
+    active
+{% endblock %}
+{% block body %} 
+{% load static %}
+<div class="container my-3" >
+<section class="py-5">
+	<div class="container">
+		<div class="row align-items-center gx-4">
+			<div class="col-md-5">
+				<div class="ms-md-2 ms-lg-5"><img class="img-fluid rounded-3" src="{% static 'images/image1.jpeg' %}"></div>
+			</div>
+			<div class="col-md-6 offset-md-1">
+				<div class="ms-md-2 ms-lg-5">
+					<span class="text-muted">Our Story</span>
+					<h2 class="display-5 fw-bold">About Us</h2>
+					<p class="lead">At Nimantha Pvt Ltd, we specialize in providing innovative technology solutions to meet the evolving needs of businesses. 
+                    Since our establishment in 2010, 
+                    we have been dedicated to delivering high-quality software, IT consulting, 
+                    and business services that help our clients achieve their goals.</p>
+					<p class="lead mb-0">With a focus on customer satisfaction and a commitment to excellence, 
+                    we strive to build lasting partnerships and drive success through reliable, cost-effective solutions.</p>
+                    <a class="btn btn-primary mt-2" href="/contact">Contact</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="py-5 my-md-5">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-7">
+                <span class="text-muted">Be social</span>
+                <h2 class="mb-3 display-5 fw-bold">Follow Us</h2>
+                <p class="lead">Stay connected with Nimantha Pvt Ltd on social media for the latest updates, news, and insights. Follow us on linkedin, Github, and blog to be part of our journey and stay informed.</p>
+                <div class="mx-auto d-flex justify-content-center">
+                    <!-- Facebook -->
+                    <a class="border rounded-5 d-flex justify-content-center align-items-center m-2" href="https://appleedia.blogspot.com/" target="_blank" style="width: 48px; height:48px">
+                        <svg class="bi bi-journal text-primary" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 4.5V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5H3zm0-1h10a1 1 0 0 1 1 1V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4.5a1 1 0 0 1 1-1z"/>
+                            <path d="M5 5h6v2H5V5zm0 3h6v2H5V8z"/>
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a class="border rounded-5 d-flex justify-content-center align-items-center m-2" href="https://www.linkedin.com/in/nimantha-lakshan-6393b921a/" target="_blank" style="width: 48px; height:48px">
+                        <svg class="bi bi-linkedin text-primary" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .632-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H3.125v7.225h1.818zm-0.909-8.212a1.069 1.069 0 1 1 0-2.138 1.069 1.069 0 0 1 0 2.138zM12.982 13.394v-3.804c0-2.157-1.148-3.157-2.677-3.157-1.3 0-1.867.72-2.194 1.22v-1.044H6.125v7.225h1.818v-3.636c0-.494.035-.987.183-1.28.402-.792 1.042-1.288 2.075-1.288 1.462 0 2.048 1.037 2.048 2.553v3.651h1.818z"></path>
+                        </svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a class="border rounded-5 d-flex justify-content-center align-items-center m-2" href="https://github.com/Nimantha-1" target="_blank" style="width: 48px; height:48px">
+                        <svg class="bi bi-github text-primary" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.075.547-.175.547-.387 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.074-2.695-1.074-.364-.924-.89-1.17-.89-1.17-.727-.497.055-.487.055-.487.803.057 1.225.825 1.225.825.715 1.223 1.874.87 2.33.665.072-.517.28-.87.508-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.824-2.146-.083-.202-.358-1.016.078-2.118 0 0 .672-.215 2.2.82a7.612 7.612 0 0 1 4.005 0c1.528-1.035 2.2-.82 2.2-.82.437 1.102.162 1.916.08 2.118.516.56.823 1.273.823 2.146 0 3.073-1.868 3.75-3.645 3.947.288.248.543.735.543 1.482 0 1.071-.01 1.935-.01 2.197 0 .213.146.464.55.386A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+{% endblock %}

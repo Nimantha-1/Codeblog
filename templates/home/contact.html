@@ -1,0 +1,98 @@
+{% extends "home/index.html" %}
+{% block title %}
+    Contact
+{% endblock %}
+{% block contactactive %} 
+    active
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="container">
+{% for message in messages %}
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+  <strong>Message: </strong> {{message}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+  <form action="/contact" method="post">
+  {% csrf_token %}
+  <section class="py-5">
+	<div class="container-fluid p-lg-0">
+		<div class="row g-0 align-items-center">
+			<div class="col-lg-6">
+				<div class="col-lg-8 mx-auto">
+					<span class="text-muted">Let's Talk</span>
+					<h2 class="display-5 fw-bold">Contact</h2>
+					<p class="lead">Have questions or need assistance? We'd love to hear from you! Fill out the form below, 
+					and our team will get back to you as soon as possible.
+					 Whether it's inquiries, feedback, or support, we're here to help.</p>
+					<form>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control bg-light" placeholder="Your name" type="text" name="name">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control bg-light" placeholder="Your email" type="text" name="email">
+								</div>
+							</div>
+              <div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control bg-light" placeholder="Your phone numer" type="text" name="phone">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<textarea class="form-control bg-light" placeholder="Describe your issue" rows="4" name="content"></textarea>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class="d-grid">
+									<button class="btn btn-primary" type="submit">Send message</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="mt-5 mt-lg-0"><img alt="" class="img-fluid" src="{% static 'images/Map1.jpeg' %}"></div>
+			</div>
+		</div>
+	</div>
+</section>
+</form>
+</div>
+
+<footer class="py-4">
+	<div class="container">
+		<div class="row justify-content-between pt-4 pb-3 pb-lg-5">
+			<div class="col-12 col-lg-7">
+				<a href=""><img alt="Free Frontend Logo" class="img-fluid mb-3" height="" src="{% static 'images/pvtltd.png' %}" width="300"></a>
+				<p class="mb-3">Is a technology company offering software development, IT consulting, and business solutions. Since 2010, 
+        we’ve been helping businesses improve efficiency and drive growth with custom software, cloud services, and IT support.</p>
+			</div>
+			<div class="col-12 col-lg-2 small text-lg-end mb-4 md-lg-0 pt-1">
+				<p class="mb-1"><a class="text-dark text-decoration-none">Home</a></p>
+				<p class="mb-1"><a class="text-dark text-decoration-none">Blog</a></p>
+				<p class="mb-1"><a class="text-dark text-decoration-none">About</a></p>
+				<p class="mb-0"><a class="text-dark text-decoration-none">Contacts</a></p>
+			</div>
+			<div class="col-12 col-lg-3 pt-1 small text-lg-end">
+				<p class="mb-1">Amunugoda, Imbulgoda</p>
+				<p class="mb-1">Srilanka, Gampaha</p>
+				<p class="mb-1">Tel: +94 71 711 3782</p>
+				<p class="mb-0"><a class="text-dark text-decoration-none" href="">nimanthalakshan790@gmail.com</a></p>
+			</div>
+		</div>
+		<div class="border-top d-lg-none"></div>
+		<div class="d-lg-flex justify-content-between py-3">
+			<div class="small">
+				<span class="d-block d-lg-inline text-muted mb-2 mb-lg-0 me-lg-5">© 2024 Nimantha Pvt.Ltd All rights reserved.</span>
+			</div>
+		</div>
+	</div>
+</footer>
+{% endblock %}

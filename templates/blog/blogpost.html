@@ -1,0 +1,57 @@
+{% extends "home/index.html" %}
+{% block title %}
+    Blog Post
+{% endblock %}
+{% block body %}
+{% load static %}
+    <article class="container">
+        <h2 class="blog-post-title mb-1">{{post.title}}</h2>
+        <p class="blog-post-meta">{{post.timeStamp}} by <a href="/about">{{post.author}}</a></p>
+        <p>{{post.content}}</p>
+    </article>
+
+    <section class="py-5 min-vh-100 d-flex align-items-center position-relative">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-7">
+				<div class="text-center">
+					<h1 class="display-3 fw-bold">For further <span class="text-primary">study</span></h1>
+					<p class="lead py-3 py-md-4">The course I suggest, through this you can further develop your skills. Get started now...</p><a class="mx-auto bg-primary text-white d-flex align-items-center justify-content-center rounded-circle" href="{{post.link}}" style="width: 60px;height: 60px;"><svg class="bi bi-play-fill" fill="currentColor" height="24" viewbox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg">
+					<path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path></svg></a>
+				</div>
+			</div>
+		</div><a class="position-absolute bottom-0 start-50 translate-middle text-primary" href="#scrollToContent">
+		<path d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" fill-rule="evenodd"></a>
+	</div>
+</section>
+
+<footer class="py-4">
+	<div class="container">
+		<div class="row justify-content-between pt-4 pb-3 pb-lg-5">
+			<div class="col-12 col-lg-7">
+				<a href=""><img alt="Free Frontend Logo" class="img-fluid mb-3" height="" src="{% static 'images/pvtltd.png' %}" width="300"></a>
+				<p class="mb-3">Is a technology company offering software development, IT consulting, and business solutions. Since 2010, 
+        we’ve been helping businesses improve efficiency and drive growth with custom software, cloud services, and IT support.</p>
+			</div>
+			<div class="col-12 col-lg-2 small text-lg-end mb-4 md-lg-0 pt-1">
+				<p class="mb-1"><a class="text-dark text-decoration-none">Home</a></p>
+				<p class="mb-1"><a class="text-dark text-decoration-none">Blog</a></p>
+				<p class="mb-1"><a class="text-dark text-decoration-none">About</a></p>
+				<p class="mb-0"><a class="text-dark text-decoration-none">Contacts</a></p>
+			</div>
+			<div class="col-12 col-lg-3 pt-1 small text-lg-end">
+				<p class="mb-1">Amunugoda, Imbulgoda</p>
+				<p class="mb-1">Srilanka, Gampaha</p>
+				<p class="mb-1">Tel: +94 71 711 3782</p>
+				<p class="mb-0"><a class="text-dark text-decoration-none" href="">nimanthalakshan790@gmail.com</a></p>
+			</div>
+		</div>
+		<div class="border-top d-lg-none"></div>
+		<div class="d-lg-flex justify-content-between py-3">
+			<div class="small">
+				<span class="d-block d-lg-inline text-muted mb-2 mb-lg-0 me-lg-5">© 2024 Nimantha Pvt.Ltd All rights reserved.</span>
+			</div>
+		</div>
+	</div>
+</footer>
+{% endblock %}
